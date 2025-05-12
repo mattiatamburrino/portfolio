@@ -1,0 +1,138 @@
+    :root {
+    --bg-color: #F0F2F5;
+    --text-color: #333;
+    --header-footer-bg: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --light-blue: #649AD2;
+    --footer-border: #ccc;
+    }
+
+    html, body
+    {
+        height: 100%;
+        margin: 0;
+        scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Fira Code', monospace;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main 
+    {
+        flex: 1;
+    }
+
+    header {
+      background-color: var(--header-footer-bg);
+      box-shadow: 0 2px 4px var(--shadow-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .nav_list {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav_list, a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--text-color);
+    }
+
+    .nav_list, nav a:hover {
+      color: var(--light-blue);
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .skills-container {
+      display: grid;
+      gap: 2rem;
+      padding: 15px; 
+    }
+
+    .skill {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skill-progress {
+      background-color: var(--progress-bg);
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+    }
+
+    .skill-bar {
+      height: 100%;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 20px;
+      color: white;
+      background-color: var(--light-blue);
+      transition: width 1s ease;
+    }
+
+    .social_media_icon {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .social_media_icon i {
+      font-size: 2rem;
+      margin: 0 0.5rem;
+      color: var(--text-color);
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .social_media_icon i:hover {
+      transform: scale(1.1);
+      color: var(--light-blue);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--header-footer-bg);
+      box-shadow: 0 2px 4px var(--shadow-color);
+    }
+
+    @media (max-width: 768px) {
+      .nav_list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
